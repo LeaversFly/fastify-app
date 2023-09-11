@@ -40,7 +40,7 @@ const _listen: listen_DTYPE = {
   },
 }
 
-// 全局配置
+// jwt令牌
 const _jwtKey: jwt_DTYPE = {
   dev: md5('imbacc'),
   prod: md5('by imbacc'),
