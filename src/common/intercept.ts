@@ -60,6 +60,10 @@ export default () => {
         const onlyid = md5(headers.authorization || '')
         logger.info('request intercept = ', { id, onlyid, url, query, body })
 
+        // 生成token
+        reply.jwtSign({ a: '1' }).then((token) => {
+            logger.warn(token)
+        })
         checkJwt(onlyid, reque, reply, next)
     })
 
